@@ -1,6 +1,6 @@
 # DataStructure Michael Goldwasser
 
-![cover image for repository]()
+![cover image for repository](DataStructure_RepoCoverImg.jpg) 
 
 I am sharpening my data structure skills in Python with this repository. It provides practice code alongside essential concepts from the book "Data Structures and Algorithms" by Michael Goldwasser.
 
