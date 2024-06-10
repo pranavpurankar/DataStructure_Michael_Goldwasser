@@ -1,5 +1,5 @@
-# DataStructure_Michael_Goldwasser
-Sharpening my data structures skills in Python with this repository. It provides practice code alongside essential concepts from the book "Data Structures and Algorithms" by Michael Goldwasser.
+# DataStructure Michael Goldwasser
+I am sharpening my data structure skills in Python with this repository. It provides practice code alongside essential concepts from the book "Data Structures and Algorithms" by Michael Goldwasser.
 
 
 This repository accompanies the book "Data Structures and Algorithms in Python" by Michael Goldwasser, providing practice code and essential concepts to solidify your understanding of fundamental data structures and algorithms.
