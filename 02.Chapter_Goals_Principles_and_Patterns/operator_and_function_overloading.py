@@ -85,6 +85,9 @@ class Order:
         new_cart.append(new_item)
         return Order(new_cart, self.customer)
 
+    def __getitem__(self, key):
+        return self.cart[key]
+
     def __str__(self):
         return f"Items in cart {self.cart} and Customer {self.customer}"
 
@@ -93,3 +96,71 @@ customer = Order(['Apples', 'Mango', 'Bananas'], 'Pranav Purankar')
 print(customer)
 customer += "Origano"
 print(customer)
+print('__getitem__:', customer[0])
+print('==='*3, '\n\n')
+
+# ========================================================
+# Reverse Operators; Making your classes mathematically correct
+# __add__(), __sub__(), __mul__(), when your class instance is left-hand
+# side operand, the operator will not work if the class instance is the
+# right-hand side operand
+
+
+class Mock:
+    def __init__(self, num):
+        self.n = num
+
+    def __add__(self, other):
+        return Mock(self.n + other)
+
+
+mock_obj = Mock(5)
+print(mock_obj.n)
+mock_obj = mock_obj + 6
+print(mock_obj.n)
+print('''\
+        mock_obj = 6 + mock_obj -> TypeError: unsp opr type(s) for +:'int' \
+        reverse_special_method: radd, rsub, rmul and so on. \
+        These handles calls such as x + obj, x - obj, and x * obj, where x is
+        not an instance of the concerned class.
+
+        Lets configure __radd__() in the Order class in such a way that it wil
+        append something at the front of the cart. This can be used in cases
+        where the cart is organized in terms of the priority of the orders.
+
+        In Python, you can define a class with the same name as an existing 
+        class in the same module. This is called shadowing. When you shadow a 
+        class, the new class definition replaces the old one.
+
+        Shadowing can be useful in some cases, but it can also be confusing 
+        and lead to errors. It is generally best to avoid shadowing classes 
+        unless you have a specific reason to do so.
+        ''')
+
+
+class Order:
+    def __init__(self, cart, customer):
+        self.cart = cart
+        self.customer = customer
+
+    def __add__(self, other):
+        new_cart = self.cart.copy()
+        new_cart.append(other)
+        return Order(new_cart, self.customer)
+
+    def __radd__(self, other):
+        new_cart = self.cart.copy()
+        new_cart.insert(0, other)
+        return Order(new_cart, self.customer)
+
+    def __str__(self):
+        return f"Cart: {self.cart} \nCustomer: {self.customer}"
+
+
+order = Order(['SDE I', 'Google'], 'Pranav Purankar')
+order = order + 'Open Source'
+print(order)
+order = 'Internship' + order
+print(order)
+
+# Now lets do a homework -> implement complex numbers class CustomComplex
