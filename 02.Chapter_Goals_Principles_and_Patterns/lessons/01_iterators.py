@@ -16,7 +16,7 @@ eat apple, then banana and goes till last fruit that is strawberry.
 
 Iteration -> It is the process of visiting every element in the container and
 performing some operation, this complete process is known as iteration.
-(continer means collection of items, in our case this is list of fruits)
+(container means collection of items, in our case this is list of fruits)
 
 Iterable -> The process of iteration is performed on the container; this list
 or container is known as iterable. In our ex. list of fruits
@@ -85,7 +85,7 @@ print('next(): ', next(new_iter_obj))   # banana
 print('''\nOne doubt
         We pass the iterable to the iter, after this we get the iterator obj.
         By using iterator, we can fetch an each element.
-        
+
         We know that iterator is also iterable, inside this there is __iter__
         magic method. Can I make an iterator of the iter_obj. Yes but there is
         no need to do this. It won't create new iterator object, rather it'll

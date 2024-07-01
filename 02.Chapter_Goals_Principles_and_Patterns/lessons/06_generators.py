@@ -2,7 +2,7 @@
 
 '''
 Generators in Python are like special functions that can generate a sequence
-of values one at a timem instead of giving you all the values at once. Imagine
+of values one at a time instead of giving you all the values at once. Imagine
 you have a machine that produces one item of sequence whenever you ask for it.
 
 Whe you create a generator using a special kind of function (you use 'yield')
