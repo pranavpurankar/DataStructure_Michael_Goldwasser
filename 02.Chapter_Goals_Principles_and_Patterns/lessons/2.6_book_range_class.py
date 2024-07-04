@@ -2,10 +2,6 @@
 
 '''
 We will develop our own range class.
-
-Below is an formula can be used to computer number elements in the range
-
-max (0, (stop - start + step - 1) // step)
 '''
 
 

@@ -13,7 +13,7 @@ Ref: realpython.com/python-lazy-evaluation
     2. Lazy evaluation
 
     1.Eager Evaluation:
-    
+
     refers to cases when Python evaluates an expression as soon as it encount-
     ers it. Here are some examples of expression that are evaluated eagerly:
     >> 5 + 10
@@ -45,9 +45,16 @@ Ref: realpython.com/python-lazy-evaluation
 
     Lazy evaluation also allows you to create infinite data structures, such
     as a live stream of audio or video data that continuously updates with new
-    information, since the program dosen't need to store all the values in 
+    information, since the program dosen't need to store all the values in
     memory at the same time. Infinite data stucture are not possible with the
     eager evaluation since they can't be store in memory.
+
+# Iterators in itertools
+->  Iterators are lazy data structures since their values are evaluated when
+    they're needed and not immediately when you define the iterator. There are
+    many more iterator in Python besides enumerate and zip. Every iterable is
+    either an iterator itself or can be converted into an iterator using
+    __iter__()
 
 '''
 
